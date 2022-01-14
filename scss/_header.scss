@@ -1,3 +1,16 @@
+@mixin flex {
+    display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+}
+
+@mixin borders {
+    border-radius: 20%;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
 header {
     nav {
         .menu {
@@ -6,10 +19,7 @@ header {
             padding: 0;
             margin: 20px auto;
             width: 95%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include flex;
 
             li {
                 padding: 10px;
@@ -27,4 +37,9 @@ header {
             }
         }
     }
+}
+
+.section {
+    width: 90%;
+    @include borders;
 }
